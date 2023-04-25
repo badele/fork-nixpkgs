@@ -340,9 +340,9 @@ in
       };
       preStart = ''
         mkdir -m 0755 -p ${smokepingHome}/cache ${smokepingHome}/data
-        ln -sf ${cfg.package}/htdocs/css ${smokepingHome}/css
-        ln -sf ${cfg.package}/htdocs/js ${smokepingHome}/js
-        ln -sf ${cgiHome} ${smokepingHome}/smokeping.fcgi
+        ln -sf ${cfg.package}/htdocs/css ${smokepingHome}/
+        ln -sf ${cfg.package}/htdocs/js ${smokepingHome}/
+        ln -sf ${cgiHome} ${smokepingHome}/
         ${cfg.package}/bin/smokeping --check --config=${configPath}
         ${cfg.package}/bin/smokeping --static --config=${configPath}
       '';
